@@ -1,85 +1,58 @@
 using UnityEngine;
-using UnityEngine.EventSystems;
-
+using UnityEngine.UI;
 using Photon.Pun;
+using TMPro;
 
-using System.Collections;
-
-namespace Com.MyCompany.MyGame
+namespace Room
 {
-    public class PlayerManager : MonoBehaviourPunCallbacks
+    public class PlayerManager : MonoBehaviourPun
     {
-
-        #region Public Fields
         [Tooltip("ローカルプレイヤーのインスタンス。このインスタンスを使用して、ローカルプレイヤーがシーンに表示されているかどうかを確認します")]
         public static GameObject LocalPlayerInstance;
 
-        [Tooltip("プレイヤーのUIゲームオブジェクトプレハブ")]
-        [SerializeField]
-        private GameObject playerUiPrefab;
+        [Tooltip("プレイヤーのUIゲームオブジェクトプレハブ")] [SerializeField] private GameObject playerUiPrefab;
 
-        [Tooltip("プレイヤーの現在の体力")]
-        public float Health = 10f;
+        [Tooltip("プレイヤーの現在の体力")]  public float Health = 10f;
 
         private PlayerManager target;
-        #endregion
+
+        private Vector2 move;
+
+        private Vector3 targetPos;
+        public GameManager gm;
+        public TMP_Text nameText;
+        public Renderer playerRenderer;
+
 
         void awake(){
-            // #重要
-            // GameManager.csで使用されます: レベルが同期されるときにインスタンス化を防ぐためにlocalPlayerインスタンスを追跡します
+            Debug.Log(("<color=yellow>PM.awake</color>"));
             if (photonView.IsMine) {
                 PlayerManager.LocalPlayerInstance = this.gameObject;
             }
-            // #重要
-            // レベルの同期中にインスタンスが生き残るように、ロード時に破棄しないようにフラグを立てます。これにより、レベルがロードされるときにシームレスな体験が得られます。
             DontDestroyOnLoad(this.gameObject);
         }
 
-        void start(){
-            if (playerUiPrefab != null)
-            {
-                GameObject _uiGo = Instantiate(playerUiPrefab);
-                _uiGo.SendMessage("PlayerUI.SetTarget", this, SendMessageOptions.RequireReceiver);
-            }
-            else
-            {
-                Debug.LogWarning("<Color=Red><a>プレイヤーのプレハブにPlayerUiPrefabの参照がありません</a></Color>。", this);
-            }
-        }
+        void Start() {
+            Debug.Log(("<color=yellow>PM.start</color>"));
+            Debug.Log(PhotonNetwork.LocalPlayer.ActorNumber);
 
-        void update(){
-            // ターゲットがnullの場合は自分自身を破壊します。これは、Photonがネットワーク上でプレイヤーのインスタンスを破壊しているときのフェイルセーフです。
-            if (target == null)
-            {
-                Destroy(this.gameObject);
-                return;
+            gm = FindObjectOfType<GameManager>();
+            if(gm.playerId == 2){
+                Debug.Log("aaaaaaa");
+                transform.rotation = Quaternion.Euler(0, 0, 180);
+            }else if(gm.playerId == 3){
+                transform.rotation = Quaternion.Euler(0, 0, 90);
+            }else if(gm.playerId == 4){
+                transform.rotation = Quaternion.Euler(0, 0, 270);
             }
         }
 
-        #region IPunObservable implementation
 
-        public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
-        {
-
-            if (stream.IsWriting)
-            {
-                //このプレイヤーを所有しています。データをほかのものに送ります。
-                stream.SendNext(Health);
-            }
-            else
-            {
-                // ネットワークプレイヤー。データ受信
-                this.Health = (float)stream.ReceiveNext();
-            }
-
+        [PunRPC]
+        void SetName(string name) {
+            Debug.Log(("<color=yellow>PM.setName</color>"));
+            nameText.text = name;
         }
-
-        void calledOnLevelWasLoaded(){
-            GameObject _uiGo = Instantiate(this.playerUiPrefab);
-            _uiGo.SendMessage("SetTarget", this, SendMessageOptions.RequireReceiver);
-        }
-
-        #endregion
-
-    } 
+        
+    }
 }

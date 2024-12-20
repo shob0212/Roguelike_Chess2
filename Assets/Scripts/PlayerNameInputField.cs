@@ -8,7 +8,7 @@ using Photon.Realtime;
 
 using System.Collections;
 
-namespace Com.MyCompany.MyGame
+namespace Room
 {
     /// <summary>
     /// プレイヤー名入力フィールド。ユーザーが名前を入力でき、ゲーム内でプレイヤーの上に表示されます。
@@ -16,19 +16,10 @@ namespace Com.MyCompany.MyGame
     [RequireComponent(typeof(TMP_InputField))]
     public class PlayerNameInputField : MonoBehaviour
     {
-        #region Private Constants
-
-        // タイプミスを避けるためにPlayerPrefキーを保存
         const string playerNamePrefKey = "PlayerName";
 
-        #endregion
-
-        #region MonoBehaviour CallBacks
-
-        /// <summary>
-        /// Unityの初期化フェーズ中にGameObjectで呼び出されるMonoBehaviourメソッドです。
-        /// </summary>
         void Start () {
+            Debug.Log(("<color=yellow>PNIF.start</color>"));
 
             string defaultName = string.Empty;
             TMP_InputField _inputField = this.GetComponent<TMP_InputField>();
@@ -40,31 +31,21 @@ namespace Com.MyCompany.MyGame
                     _inputField.text = defaultName;
                 }
             }
-
             PhotonNetwork.NickName =  defaultName;
         }
 
-        #endregion
-
-        #region Public Methods
-
-        /// <summary>
-        /// プレイヤーの名前を設定し、将来のセッションのためにPlayerPrefsに保存します。
-        /// </summary>
-        /// <param name="value">プレイヤーの名前</param>
-        public void SetPlayerName(string value)
+         public void SetPlayerName(string value)
         {
-            // #重要
-            if (string.IsNullOrEmpty(value))
+            Debug.Log(("<color=yellow>PNIF.setPlayerName</color>"));
+            Debug.Log((value));
+            if (value == "")
             {
-                Debug.LogError("プレイヤー名が空またはnullです");
-                return;
+                PhotonNetwork.LocalPlayer.NickName = "DefaultPlayer";
+            }else{
+                PhotonNetwork.LocalPlayer.NickName = value;
             }
-            PhotonNetwork.NickName = value;
-
             PlayerPrefs.SetString(playerNamePrefKey,value);
         }
 
-        #endregion
     }
 }

@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Roguelike_Chess_v2.sln"
+    "dotnet.defaultSolution": "Roguelike_Chess2.sln"
 }

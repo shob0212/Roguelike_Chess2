@@ -248,8 +248,8 @@ GameObject:
   - component: {fileID: 7446635841228304394}
   - component: {fileID: 5052734493707532087}
   - component: {fileID: 4097371459015013395}
-  - component: {fileID: 9088311982665339171}
-  - component: {fileID: -2468340163431416548}
+  - component: {fileID: 6020778498982167543}
+  - component: {fileID: 2273714126740970170}
   m_Layer: 0
   m_Name: 'Avatar '
   m_TagString: Untagged
@@ -364,7 +364,7 @@ MonoBehaviour:
   m_SynchronizeRotation: 0
   m_SynchronizeScale: 0
   m_UseLocal: 0
---- !u!114 &9088311982665339171
+--- !u!114 &6020778498982167543
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -373,15 +373,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 9001802056536173898}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fd64044e8b6c1144a94d4e70beb6e7d, type: 3}
+  m_Script: {fileID: 11500000, guid: 878a007cecaa13047a72e4ae7044fff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerUiPrefab: {fileID: 9001802056536173898}
   Health: 10
-  gm: {fileID: 0}
   nameText: {fileID: 7321441340793231184}
-  playerRenderer: {fileID: 7446635841228304394}
---- !u!114 &-2468340163431416548
+--- !u!114 &2273714126740970170
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -390,8 +388,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 9001802056536173898}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 229138a9c20040d4288ec00eea7aab74, type: 3}
+  m_Script: {fileID: 11500000, guid: 991b99c98edf9a6449337c8fb69e529e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 5
-  gm: {fileID: 0}

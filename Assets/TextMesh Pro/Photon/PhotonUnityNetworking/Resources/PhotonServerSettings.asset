@@ -41,6 +41,12 @@ MonoBehaviour:
   - RespawnSpaceship
   - SetTarget
   - SetName
+  - SyncPlayerID
+  - SyncPlayerTurnOrder
+  - PlayerAction
+  - PlayerActionCoroutine
+  - StartPhase
+  - UpdatePhaseReady
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 0

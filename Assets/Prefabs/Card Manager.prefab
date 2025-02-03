@@ -44,6 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5807bc514d33a140a881721d3ab5764, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  actionPhaseManagerPrefab: {fileID: 6278177738426275798, guid: 002bf219b8a2f884e9a347d82e068e94, type: 3}
+  movePhaseManagerPrefab: {fileID: 828758952807378661, guid: 94772bc3c29b7ef4ba2f360c152faed8, type: 3}
   cardDatabase: {fileID: 508493579333245114, guid: 465899983527ec14fb90be4318cff05e, type: 3}
   piaceCardSlots:
   - {fileID: 0}

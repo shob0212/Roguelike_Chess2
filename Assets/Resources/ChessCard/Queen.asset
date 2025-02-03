@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ef56ddfe4d0cd343a96ee11afb04460, type: 3}
   m_Name: Queen
   m_EditorClassIdentifier: 
+  CardName: "\u30AF\u30A4\u30FC\u30F3"
+  CardType: Piece
   Strength: 5
-  CardPrefab: {fileID: 8564599334000147767, guid: a5612add2bb89e149bbc42ef05762a49, type: 3}
+  CardPrefab: {fileID: 7363765057587656813, guid: a5612add2bb89e149bbc42ef05762a49, type: 3}

@@ -47,6 +47,17 @@ MonoBehaviour:
   - PlayerActionCoroutine
   - StartPhase
   - UpdatePhaseReady
+  - UpdatePhaseReadyAll
+  - UpdateTurnFinish
+  - FinishPhaseReady
+  - SetLog
+  - SyncPlayerPhotonViews
+  - SyncBlocks
+  - ReceiveSkill
+  - SetPlayerHps
+  - SkillReceived
+  - SkillReceivedPlayerName
+  - UpdateHealFinish
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 0

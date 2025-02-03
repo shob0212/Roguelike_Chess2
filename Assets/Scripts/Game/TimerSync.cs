@@ -68,7 +68,7 @@ public class TimerSync : MonoBehaviourPunCallbacks
         {
             Debug.Log("timeLimit："+timeLimit+"startTime："+startTime);
             // GameManagerのインスタンスを取得し、コルーチンを開始
-            GameManager.Instance.ManageTurnTimer();
+            GameManager.Instance.FinishPhaseReady();
             isReadyTimerSet = false;
             startTime = 0;
             // タイマーを削除

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Piece Card
   - Skill Card
+  - Card
   layers:
   - Default
   - TransparentFX

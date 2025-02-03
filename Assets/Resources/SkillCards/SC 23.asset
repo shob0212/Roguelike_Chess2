@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ef56ddfe4d0cd343a96ee11afb04460, type: 3}
+  m_Name: SC 23
+  m_EditorClassIdentifier: 
+  CardName: "\u30D1\u30EA\u30A3"
+  CardType: Skill
+  skillType: 2
+  Strength: 23
+  CardPrefab: {fileID: 2000257387697016304, guid: 00c82ca6bae555d49a54e026ab61fe3d, type: 3}

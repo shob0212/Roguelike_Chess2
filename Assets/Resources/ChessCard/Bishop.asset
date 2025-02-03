@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ef56ddfe4d0cd343a96ee11afb04460, type: 3}
   m_Name: Bishop
   m_EditorClassIdentifier: 
+  CardName: "\u30D3\u30B7\u30E7\u30C3\u30D7"
+  CardType: Piece
   Strength: 3
   CardPrefab: {fileID: 549421304818176127, guid: 16f870e97224e02439c81d765258b0af, type: 3}

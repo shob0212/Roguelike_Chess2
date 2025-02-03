@@ -65,7 +65,6 @@ public class BlinkingEffect : MonoBehaviour
                         
                     } 
                 }
-                //GetComponent<SpriteRenderer>().color = new Color(76/255f,245/255f,75/255f,(byte)alpha/255f);
                 yield return null;
             }
         }

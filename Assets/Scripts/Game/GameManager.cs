@@ -72,7 +72,6 @@ public class GameManager : MonoBehaviourPunCallbacks
                 }
             }
         }
-        //photonView.RPC("SyncBlocks", RpcTarget.AllBuffered, block1_1, block1_2, block2_1, block2_2);
     }
 
 
@@ -122,7 +121,6 @@ public class GameManager : MonoBehaviourPunCallbacks
         int vectorY=0;
         int camX=7;
         int camY=4;
-        //PlayerInfo.playerId = 4;
         if(PlayerInfo.playerId == 2){
 
             rotation = 180;  vectorX = 14;  vectorY = 14;  camX = 7;  camY = 10;
@@ -251,7 +249,6 @@ public class GameManager : MonoBehaviourPunCallbacks
                     RoundNum.text = roundCount.ToString();
                     phaseText.text = "移動フェーズ";
                     
-                    //GameObject drawPC = Instantiate(cardDrawPrefab);
                     cardObjs = GameObject.FindGameObjectsWithTag("Card");
                     int i = 0;
                     foreach (GameObject cardObj in cardObjs)
@@ -271,7 +268,6 @@ public class GameManager : MonoBehaviourPunCallbacks
                     Debug.Log(isReadyAll);
                     isReadyAllText.text = isReadyAll +"/"+ PhotonNetwork.CurrentRoom.PlayerCount +" - 準備完了";
                     phaseText.text = "アクションフェーズ";
-                    //GameObject drawSC = Instantiate(cardDrawPrefab);
                     cardObjs = GameObject.FindGameObjectsWithTag("Card");
                     int i = 0;
                     foreach (GameObject cardObj in cardObjs)
@@ -326,11 +322,6 @@ public class GameManager : MonoBehaviourPunCallbacks
     
     public void PhaseReady(){
         Debug.Log("なんで3回きてんねんあほ");
-        /*if(phase == 1){
-            MovePhase phaseObj = GameObject.Find("Move Phase Manager(Clone)").GetComponent<MovePhase>();
-        }else{
-            ActionPhase phaseObj = GameObject.Find("Action Phase Manager(Clone)").GetComponent<ActionPhase>();
-        }*/
         if(isReady){
             if(phase == 1){
                 GameObject.Find("Move Phase Manager(Clone)").GetComponent<MovePhase>().cancelIsPhaseReady();;

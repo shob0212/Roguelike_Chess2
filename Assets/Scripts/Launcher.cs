@@ -6,7 +6,6 @@ using System.Threading;
 public class Launcher : MonoBehaviourPunCallbacks
 {
     bool isConnecting = false;
-    //bool connectedMasterflg = false;
 
     [Tooltip("ユーザーが名前を入力し、接続してプレイするためのUIパネル")]
     [SerializeField]
@@ -49,11 +48,6 @@ public class Launcher : MonoBehaviourPunCallbacks
             PhotonNetwork.JoinRandomRoom();
         }
 
-        /*if(!isConnecting)
-        {
-            isConnecting = PhotonNetwork.ConnectUsingSettings();
-            PhotonNetwork.GameVersion = gameVersion;
-        }*/
     }
     
 

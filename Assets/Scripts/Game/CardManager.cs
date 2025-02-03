@@ -129,7 +129,6 @@ public class CardManager : MonoBehaviour
             currentCardSlotIndexSC = currentCardSlotIndex;
         }
 
-        //Destroy(this.gameObject);
 
         yield break;
     }
@@ -147,7 +146,6 @@ public class CardManager : MonoBehaviour
     IEnumerator DrawCard()
     {
 
-        //Debug.Log(GameManager.Instance.phase);
 
         isAnimating = true;
         // ランダムにカードアセットを取得

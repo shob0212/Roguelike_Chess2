@@ -28,7 +28,6 @@ public class PlayerNameInputField : MonoBehaviour
                 _inputField.text = defaultName;
             }
         }
-        //PhotonNetwork.NickName =  defaultName;
     }
 
         public void SetPlayerName()

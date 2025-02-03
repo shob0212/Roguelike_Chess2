@@ -97,7 +97,6 @@ namespace Lobby{
         public GameObject playerPrefab;
 
 
-        //public static LobbyManager gm;
 
 
 

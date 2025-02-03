@@ -119,7 +119,6 @@ public class MovePhase : MonoBehaviour
             if(tile != clickedTile){
                 Debug.Log("何回出てる");
                 tile.transform.Find("Selected Highlight").GetComponentInChildren<BlinkingEffect>().StopBlinking();
-                //tile.selectedHighlightObject.SetActive(false);
                 tile.isSelected = false;
             }
         }
@@ -233,7 +232,7 @@ public class MovePhase : MonoBehaviour
     private bool isPawnMoveValid(GameObject myAvatar, Tile tile)
     {
         // ポーンの動きを計算するロジック (例: 前方1マス移動)
-        Vector2 avatarPos = myAvatar.transform.position;//GameObject.Find("Player UI Canvas").transform.InverseTransformPoint(myAvatar.transform.position);
+        Vector2 avatarPos = myAvatar.transform.position;
         Vector2 tilePos = tile.transform.position;
 
         int dx = (int)(tilePos.x - avatarPos.x);

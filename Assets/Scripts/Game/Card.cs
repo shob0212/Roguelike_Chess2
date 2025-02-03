@@ -32,13 +32,7 @@ public class Card : MonoBehaviour
     //フェーズが移行されたときクリックをブロックする処理
     public void BlockClick(int phase, bool exe)
     {
-        //Debug.Log(cardName+isHighlighted+isClickEnabled);
         if(exe){
-           /* if(isHighlighted){
-                clickBlocker.SetActive(true);
-            }else{
-                Highlight(true);
-            }*/
             isClickEnabled = false;
             if(isSelected){
                 highlightObject.SetActive(true);
@@ -93,7 +87,6 @@ public class Card : MonoBehaviour
     public void Highlight(bool isHighlighted)
     {
         highlightObject.SetActive(isHighlighted);
-        //this.isHighlighted = isHighlighted;
     }
 
 

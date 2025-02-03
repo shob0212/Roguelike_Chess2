@@ -34,21 +34,9 @@ public class TimerSync : MonoBehaviourPunCallbacks
     { 
         if(!isReadyTimerSet) return;
 
-        /*if(startTime==0 && isReadyTimerSet)
-        {
-            //開始時刻を取得
-            if(PhotonNetwork.CurrentRoom.CustomProperties.TryGetValue("startTime", out object startTimeValue)){
-                startTime = (int)startTimeValue;
-            }
-        } */
         // 経過時間の計算
         elapsedTime = Mathf.Max(0f , (PhotonNetwork.ServerTimestamp - startTime) / 1000f);
 
-        /*timer -= Time.deltaTime;
-        if (timer < 0) timer = 0;*/
-        // 時間制御
-        //now += Time.deltaTime; // タイマー
-        //Debug.Log(now);
         float t = elapsedTime / timer; // スライダーの値ー正規化
         timerSlider.value = Mathf.Lerp(1f, 0f, t);
         timeLimit = timer - elapsedTime; // 残り時間
@@ -56,8 +44,6 @@ public class TimerSync : MonoBehaviourPunCallbacks
         string timeLog = timeLimit.ToString("F0");
         timerText.text = timeLog;
         
-        /*timerSlider.value = timer;
-        timerText.text = Mathf.Ceil(timer).ToString(); // 残り秒数を表示*/
         
         fill.color = (timeLimit > 10.5f) ? greenColor : redColor; // スライダーの色（10.5秒以上は緑、未満は赤）
         timerText.color = (timeLimit > 10.5f) ? Color.white : Color.red; // 文字の色（10.5秒以上は黒、未満は赤）
@@ -77,34 +63,5 @@ public class TimerSync : MonoBehaviourPunCallbacks
         }
     }
 
-    /*public override void OnRoomPropertiesUpdate(Hashtable propertiesThatChanged)
-    {
-        base.OnRoomPropertiesUpdate(propertiesThatChanged);
 
-        // カスタムプロパティが更新されたときの処理
-        if (propertiesThatChanged.ContainsKey("startTime"))
-        {
-            startTime = (int)propertiesThatChanged["startTime"];
-            Debug.Log("StartTime updated: " + startTime);
-            isReadyTimerSet = true;
-        }
-        
-
-    }
-
-    /*void IPunObservable.OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
-    {
-        Debug.Log("<color=yellow>TimerSync.OnPhotonSerializeView</color>");
-        if (stream.IsWriting)
-        {
-            stream.SendNext(timerSlider.value);
-            stream.SendNext(timerText.text);
-        }
-        else
-        {
-            timerSlider.value = (float)stream.ReceiveNext();
-            timerText.text = (string)stream.ReceiveNext();
-            Debug.Log(now);
-        }
-    }*/
 }

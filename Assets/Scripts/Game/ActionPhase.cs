@@ -104,7 +104,6 @@ public class ActionPhase : MonoBehaviour
             if(tile != clickedTile){
                 Debug.Log("何回出てる");
                 tile.transform.Find("Selected Highlight").GetComponentInChildren<BlinkingEffect>().StopBlinking();
-                //tile.selectedHighlightObject.SetActive(false);
                 tile.isSelected = false;
             }
         }

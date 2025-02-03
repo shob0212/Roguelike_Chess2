@@ -18,7 +18,6 @@ namespace Lobby{
         void Start()
         {
             Debug.Log(("<color=yellow>PAM.start</color>"));
-            //gm = FindObjectOfType<GameManager>();
             Debug.Log(PhotonNetwork.PlayerList.Length);
             p = GameObject.Find("Avatar (Clone)").GetComponent<Transform>();
             if(PlayerInfo.playerId == 2){
@@ -26,12 +25,10 @@ namespace Lobby{
                 yAdjust = -1;
                 targetPos = new Vector3(14, 14, 0);
             }else if(PlayerInfo.playerId == 3){
-                //xAdjust = -1;
                 yAdjust = -1;
                 targetPos = new Vector3(14, 0, 0);
             }else if(PlayerInfo.playerId == 4){
                 xAdjust = -1;
-                //yAdjust = -1;
                 targetPos = new Vector3(0, 14, 0);
             }
         }

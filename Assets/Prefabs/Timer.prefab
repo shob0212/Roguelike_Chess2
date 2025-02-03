@@ -212,7 +212,7 @@ MonoBehaviour:
   timerSlider: {fileID: 4622766607081734925}
   fill: {fileID: 852622164361075763}
   timerText: {fileID: 2628339144058796349}
-  timer: 15
+  timer: 999
 --- !u!1 &6107113962940185947
 GameObject:
   m_ObjectHideFlags: 0

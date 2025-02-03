@@ -10,7 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4ef56ddfe4d0cd343a96ee11afb04460, type: 3}
-  m_Name: SC
+  m_Name: SC 27
   m_EditorClassIdentifier: 
-  Strength: 1
-  CardPrefab: {fileID: 6720368359184107879, guid: d5522987fa8205342818fa66c127cc6d, type: 3}
+  CardName: "\u8349\u7D50\u3073"
+  CardType: Skill
+  skillType: 4
+  Strength: 27
+  CardPrefab: {fileID: 2000257387697016304, guid: 25c6faf2183c7a049890b9f63fdc47ed, type: 3}

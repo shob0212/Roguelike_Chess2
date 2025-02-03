@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ef56ddfe4d0cd343a96ee11afb04460, type: 3}
   m_Name: Rook
   m_EditorClassIdentifier: 
+  CardName: "\u30EB\u30FC\u30AF"
+  CardType: Piece
   Strength: 4
-  CardPrefab: {fileID: 7307956247085764182, guid: f847d2e69efb6c34eae6599673cb5da1, type: 3}
+  CardPrefab: {fileID: 7818430174196044465, guid: f847d2e69efb6c34eae6599673cb5da1, type: 3}

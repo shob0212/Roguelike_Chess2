@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ef56ddfe4d0cd343a96ee11afb04460, type: 3}
   m_Name: Knight
   m_EditorClassIdentifier: 
+  CardName: "\u30CA\u30A4\u30C8"
+  CardType: Piece
   Strength: 2
-  CardPrefab: {fileID: 3995161486070035133, guid: 69c2fc968681ae849bc9284ef6104df8, type: 3}
+  CardPrefab: {fileID: 4369738621227507540, guid: 69c2fc968681ae849bc9284ef6104df8, type: 3}

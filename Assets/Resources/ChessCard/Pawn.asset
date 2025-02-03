@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ef56ddfe4d0cd343a96ee11afb04460, type: 3}
   m_Name: Pawn
   m_EditorClassIdentifier: 
+  CardName: "\u30DD\u30FC\u30F3"
+  CardType: Piece
   Strength: 1
-  CardPrefab: {fileID: 6803310203387882739, guid: 83cfe64593d2eb5449ead3c9ed95eb43, type: 3}
+  CardPrefab: {fileID: 8542010174132841255, guid: 83cfe64593d2eb5449ead3c9ed95eb43, type: 3}

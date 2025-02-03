@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ef56ddfe4d0cd343a96ee11afb04460, type: 3}
+  m_Name: SC 25
+  m_EditorClassIdentifier: 
+  CardName: "\u30B7\u30A7\u30EB\u30BF\u30FC"
+  CardType: Skill
+  skillType: 2
+  Strength: 25
+  CardPrefab: {fileID: 2000257387697016304, guid: 9c40c0245329625478958a0497ecc4ff, type: 3}
